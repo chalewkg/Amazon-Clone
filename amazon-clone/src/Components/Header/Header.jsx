@@ -3,6 +3,7 @@ import { BsSearch } from "react-icons/bs";
 import { SlLocationPin } from "react-icons/sl";
 import { BiCart } from "react-icons/bi";
 import classes from "./header.module.css";
+import LowerHeader from "./LowerHeader.jsx";
 
 function Header() {
   return (
@@ -94,6 +95,8 @@ function Header() {
           </div>
         </div>
       </section>
+
+      <LowerHeader />
     </>
   );
 }
