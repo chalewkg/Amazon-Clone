@@ -9,7 +9,6 @@ function Landing() {
     <Layout>
       <Carousel />
       <Category />
-      <ProductDetail />
     </Layout>
   );
 }

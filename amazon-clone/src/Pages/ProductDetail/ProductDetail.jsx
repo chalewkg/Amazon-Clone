@@ -3,7 +3,11 @@ import "./product.module.css";
 import Layout from "../../Components/LayOut/Layout";
 
 function ProductDetail() {
-  return <div>Product</div>;
+  return (
+    <>
+      <div>ProductDetail</div>
+    </>
+  );
 }
 
 export default ProductDetail;

@@ -70,15 +70,15 @@ function Header() {
               <p>Sign In</p>
 
               <select name="" id="">
-                <option value="">Account & Lists</option>
-                <optgroup label="Your Account">
+                <option value="Account & Lists">Account & Lists</option>
+                {/* <optgroup label="Your Account">
                   <option value="">Account</option>
                   <option value="Order">Order </option>
                 </optgroup>
                 <optgroup label="Your List">
                   <option value="Shoping List">Shoping List</option>
                   <option value="Wish List">Whish List </option>
-                </optgroup>
+                </optgroup> */}
               </select>
             </Link>
 
