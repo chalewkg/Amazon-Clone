@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "./ProductCard";
+import classes from "./product.module.css";
 
 function Product() {
   const [Product, setProducts] = useState([]);
@@ -17,9 +18,7 @@ function Product() {
       });
   }, []);
   return (
-    <section>
-      <h1>Product</h1>
-
+    <section className={classes.products_container}>
       {Product.map((singleProduct) => (
         <ProductCard product={singleProduct} />
       ))}

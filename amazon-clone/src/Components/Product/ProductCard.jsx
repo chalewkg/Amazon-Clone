@@ -1,17 +1,30 @@
 import React from "react";
+import Rating from "@mui/material/Rating";
+import CurrencyFormat from "../CurrencyFormat.jsx/CurrencyFormat";
+import classes from "./product.module.css";
 
-function ProductCard() {
+function ProductCard({ product }) {
+  const { image, title, id, rating, price } = product;
   return (
-    <div>
-      <a href=""></a>
-      <did>
-        <h3>title</h3>
-        <div>
+    <div className={`${classes.card_container}`}>
+      <a href="">
+        <img src={image} alt="" />
+      </a>
+
+      <div>
+        <h3>{title}</h3>
+        <div className={classes.rating}>
           {/* rating */}
-          {/* price */}
+          <Rating value={rating.rate} precision={0.1} />
+          {/* count */}
+          <small>{rating.count}</small>
         </div>
-        <div>{/* price */}</div>
-      </did>
+        <div>
+          {/* price */}
+          <CurrencyFormat amount={price} />
+        </div>
+        <button className={classes.button}>add to cart</button>
+      </div>
     </div>
   );
 }
