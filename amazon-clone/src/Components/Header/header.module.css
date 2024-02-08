@@ -1,15 +1,19 @@
+/* header.module.css */
 * {
   padding: 0;
   margin: 0;
 }
 
 .header_container {
+  position: sticky;
+  top: 0;
   background-color: #1a1a1a;
   display: flex;
   gap: 10px;
   align-items: center;
   color: white;
   height: 70px;
+  font-size: 20px;
 }
 
 .logo_container {
@@ -36,7 +40,7 @@
 }
 
 .delivery p {
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .search {
@@ -88,7 +92,7 @@
   width: 20%;
 }
 .order_container p {
-  font-size: 10px;
+  font-size: 20px;
 }
 
 .order_container a {
