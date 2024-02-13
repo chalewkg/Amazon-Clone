@@ -10,16 +10,20 @@ import { DataContext } from "../DataProvider/DataProvider.jsx";
 function Header() {
   const [{ basket }, dispatch] = useContext(DataContext);
 
+  const totalItem = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
+
   return (
     <section className={classes.fixed}>
       <section>
         <div className={classes.header_container}>
           {/* Logo section */}
           <div className={classes.logo_container}>
-            <Link to="/">
+            <Link to='/'>
               <img
-                src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
-                alt="amazon logo"
+                src='https://pngimg.com/uploads/amazon/amazon_PNG11.png'
+                alt='amazon logo'
               />
             </Link>
             <div className={classes.delivery}>
@@ -34,66 +38,43 @@ function Header() {
           </div>
           {/* Serach Section*/}
           <div className={classes.search}>
-            <select name="" id="">
-              <option value="">All</option>
+            <select name='' id=''>
+              <option value=''>All</option>
             </select>
 
-            {/* <select name="category" id="category">
-              <option value="all">All</option>
-               <optgroup label="Electronics">
-                <option value="technology">Technology</option>
-                <option value="appliances">Appliances</option>
-              </optgroup>
-              <optgroup label="Services">
-                <option value="consulting">Consulting</option>
-                <option value="repair">Repair Services</option>
-              </optgroup>
-              <optgroup label="Home & Garden">
-                <option value="furniture">Furniture</option>
-                <option value="decor">Home Decor</option>
-              </optgroup> */}
-            {/* </select> */}
-            <input type="text" name="" placeholder="Search Product"></input>
+            <input type='text' name='' placeholder='Search Product'></input>
+
             <BsSearch size={25} />
           </div>
           {/* right side link */}
           <div className={classes.order_container}>
-            <Link to="/orders" className={classes.language}>
+            <Link to='/orders' className={classes.language}>
               <img
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1024px-Flag_of_the_United_States.svg.png"
-                alt="American Flag"
+                src='https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1024px-Flag_of_the_United_States.svg.png'
+                alt='American Flag'
               />
-              <select name="" id="">
-                <option value="">EN</option>
+              <select name='' id=''>
+                <option value=''>EN</option>
               </select>
             </Link>
 
             {/* Sign in */}
-            <Link to="/auth">
+            <Link to='/auth'>
               <p>Sign In</p>
 
-              <select name="" id="">
-                <option value="Account & Lists">Account & Lists</option>
-                {/* <optgroup label="Your Account">
-                  <option value="">Account</option>
-                  <option value="Order">Order </option>
-                </optgroup>
-                <optgroup label="Your List">
-                  <option value="Shoping List">Shoping List</option>
-                  <option value="Wish List">Whish List </option>
-                </optgroup> */}
+              <select name='' id=''>
+                <option value='Account & Lists'>Account & Lists</option>
               </select>
             </Link>
-
             {/* orders */}
-            <Link to="/orders">
+            <Link to='/orders'>
               <p>Returns</p>
               <span>& Orders</span>
             </Link>
             {/* Cart */}
-            <Link to="/cart" className={classes.cart}>
+            <Link to='/cart' className={classes.cart}>
               <BiCart size={35} />
-              <span>{basket.length}</span>
+              <span>{totalItem}</span>
             </Link>
           </div>
         </div>

@@ -1,14 +1,15 @@
 import React from "react";
+import Layout from "../../Components/LayOut/Layout";
 import Carousel from "../../Components/Carousel/CarouselEffect";
 import Category from "../../Components/Category/Category";
-import Layout from "../../Components/LayOut/Layout";
-import ProductDetail from "../ProductDetail/ProductDetail";
+import Product from "../../Components/Product/Product";
 
 function Landing() {
   return (
     <Layout>
       <Carousel />
       <Category />
+      <Product />
     </Layout>
   );
 }
