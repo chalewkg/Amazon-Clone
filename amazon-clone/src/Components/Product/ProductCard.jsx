@@ -26,17 +26,13 @@ function ProductCard({ product, flex, renderDesc, renderAdd }) {
       className={`${classes.card_container} ${
         flex ? classes.product_flexed : ""
       }`}>
-      {/* <a href='#'>
-        <img src={image} alt='' className={classes.img_contianer} />
-      </a> */}
-
       <Link to={`/products/${id}`}>
         <img src={image} alt='' className={classes.img_contianer} />
       </Link>
 
       <div>
         <h3>{title}</h3>
-        {renderDesc && <div style={{ maxwidth: "750px" }}>{description}</div>}
+        {renderDesc && <div style={{ maxWidth: "550px" }}>{description}</div>}
         <div className={classes.rating}>
           {/* rating */}
           <Rating value={rating?.rate} precision={0.1} />

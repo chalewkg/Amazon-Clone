@@ -46,18 +46,12 @@
 
 /* Define a grid container for displaying products */
 .products_container {
-  /* Use CSS Grid for layout */
   display: grid;
-  /* Automatically fill columns with a minimum width of 250px */
-  grid-template-columns: repeat(auto-fill, 250px);
-  /* Set the maximum width of the container */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   max-width: 1450px;
-  /* Center the container horizontally with a top and bottom margin of 100px */
   margin: 100px auto 100px auto;
-  /* Set the gap between grid items */
   gap: 50px;
-  /* Align grid items horizontally at the center */
-  justify-items: center;
+  justify-content: center;
 }
 
 .products_contianer section {

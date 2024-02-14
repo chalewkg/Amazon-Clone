@@ -34,7 +34,7 @@ function Cart() {
   return (
     <Layout>
       <section className={classes.container}>
-        <div className={classes.cart__container}>
+        <div className={classes.car__container}>
           <h2>Hello</h2>
           <h3>Your shopping basket</h3>
           <hr />

@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./signup.module.css";
 import Layout from "../../Components/LayOut/Layout";
-function SignIn() {
+function Auth() {
   return (
     <Layout>
       <div>SignIn</div>
@@ -9,4 +9,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default Auth;
