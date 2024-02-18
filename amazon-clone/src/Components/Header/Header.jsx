@@ -79,7 +79,7 @@ function Header() {
             </Link>
             {/* orders */}
             <Link to='/orders'>
-              <p>Returns</p>
+              <p>returns</p>
               <span>& Orders</span>
             </Link>
             {/* Cart */}
